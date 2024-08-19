@@ -10,7 +10,6 @@ class ChatScreen extends StatefulWidget {
   final String currentUserId;
   final String friendId;
   final String friendName;
-
   const ChatScreen(
       {super.key,
         required this.currentUserId,
