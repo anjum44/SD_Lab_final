@@ -7,10 +7,10 @@ import 'package:women_safety_app/components/SecondaryButton.dart';
 import 'package:women_safety_app/components/custom_textfield.dart';
 import 'package:women_safety_app/child/register_child.dart';
 import 'package:women_safety_app/db/share_pref.dart';
-import 'package:women_safety_app/parent/parent_register_screen.dart';
+import 'package:women_safety_app/parents/parent_register_screen.dart';
 import 'package:women_safety_app/utils/constants.dart';
 
-import '../parent/parent_home_screen.dart';
+import '../parents/parent_home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
