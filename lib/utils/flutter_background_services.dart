@@ -4,9 +4,10 @@ import 'dart:ui';
 import 'package:background_location/background_location.dart';
 import 'package:background_sms/background_sms.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
-import 'package:flutter_background_service_android/flutter_background_service_android.dart';
+
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:shake/shake.dart';
 import 'package:telephony/telephony.dart';
@@ -33,8 +34,8 @@ Future<void> initializeService() async {
   final service = FlutterBackgroundService();
   AndroidNotificationChannel channel = AndroidNotificationChannel(
     "script academy",
-    "foregrounf service",
-    "used for imp notifcation",
+    "foreground service",
+
     importance: Importance.low,
   );
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -52,7 +53,7 @@ Future<void> initializeService() async {
         isForegroundMode: true,
         autoStart: true,
         notificationChannelId: "script academy",
-        initialNotificationTitle: "foregrounf service",
+        initialNotificationTitle: "foreground service",
         initialNotificationContent: "initializing",
         foregroundServiceNotificationId: 888,
       ));
@@ -135,8 +136,8 @@ void onStart(ServiceInstance service) async {
         NotificationDetails(
             android: AndroidNotificationDetails(
               "script academy",
-              "foregrounf service",
-              "used for imp notifcation",
+              "foreground service",
+
               icon: 'ic_bg_service_small',
               ongoing: true,
             )),
