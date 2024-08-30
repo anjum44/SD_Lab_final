@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:background_location/background_location.dart';
+import 'package:background_location/background_location.dart' as bg_location;
 import 'package:background_sms/background_sms.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
 
@@ -62,7 +62,8 @@ Future<void> initializeService() async {
 
 @pragma('vm-entry-point')
 void onStart(ServiceInstance service) async {
-  Location? clocation;
+  bg_location. Location? clocation;
+
 
   DartPluginRegistrant.ensureInitialized();
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -79,16 +80,16 @@ void onStart(ServiceInstance service) async {
   service.on('stopService').listen((event) {
     service.stopSelf();
   });
-  await BackgroundLocation.setAndroidNotification(
+  await bg_location. BackgroundLocation.setAndroidNotification(
     title: "Location tracking is running in the background!",
     message: "You can turn it off from settings menu inside the app",
     icon: '@mipmap/ic_logo',
   );
-  BackgroundLocation.startLocationService(
+  bg_location.BackgroundLocation.startLocationService(
     distanceFilter: 20,
   );
 
-  BackgroundLocation.getLocationUpdates((location) {
+ bg_location. BackgroundLocation.getLocationUpdates((location) {
     clocation = location;
   });
   if (service is AndroidServiceInstance) {
@@ -136,12 +137,14 @@ void onStart(ServiceInstance service) async {
         NotificationDetails(
             android: AndroidNotificationDetails(
               "script academy",
-              "foreground service",
+               "foreground service",
+               icon: 'ic_bg_service_small',
+               ongoing: true,
+                ),),
+            );
+          }
+         }
+          }
 
-              icon: 'ic_bg_service_small',
-              ongoing: true,
-            )),
-      );
-    }
-  }
-}
+
+
