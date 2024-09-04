@@ -34,7 +34,7 @@ Future<void> initializeService() async {
   final service = FlutterBackgroundService();
   AndroidNotificationChannel channel = AndroidNotificationChannel(
     "script academy",
-    "foreground service",
+    "foregrounf service",
 
     importance: Importance.low,
   );
@@ -53,7 +53,7 @@ Future<void> initializeService() async {
         isForegroundMode: true,
         autoStart: true,
         notificationChannelId: "script academy",
-        initialNotificationTitle: "foreground service",
+        initialNotificationTitle: "foregrounf service",
         initialNotificationContent: "initializing",
         foregroundServiceNotificationId: 888,
       ));
