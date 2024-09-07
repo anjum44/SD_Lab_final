@@ -35,7 +35,7 @@ class ParentHomeScreen extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        backgroundColor: Colors.pink,
+        backgroundColor: Colors.purple,
         // backgroundColor: Color.fromARGB(255, 250, 163, 192),
         title: Text("SELECT CHILD"),
       ),

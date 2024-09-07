@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
               MySharedPrefference.saveUserType('parent');
               goTo(context, ParentHomeScreen());
             } else {
-              MySharedPrefference.saveUserType('child');
+              MySharedPrefference.saveUserType('user');
               goTo(context, BottomPage());
             }
           }
@@ -111,12 +111,12 @@ class _LoginScreenState extends State<LoginScreen> {
                               style: TextStyle(
                                   fontSize: 40,
                                   fontWeight: FontWeight.bold,
-                                  color: kColorRed),
+                                  color: Colors.black),
                             ),
                             Image.asset(
-                              'assets/logo.png',
-                              height: 100,
-                              width: 100,
+                              'assets/logo.jpg',
+                              height: 200,
+                              width: 200,
                             ),
                           ],
                         ),
@@ -194,7 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       SecondaryButton(
-                          title: 'Register as child',
+                          title: 'Register ',
                           onPressed: () {
                             goTo(context, RegisterChildScreen());
                           }),
