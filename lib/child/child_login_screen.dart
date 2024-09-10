@@ -185,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Frogot Password?",
+                              "Forget Password?",
                               style: TextStyle(fontSize: 18),
                             ),
                             SecondaryButton(
