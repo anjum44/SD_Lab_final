@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:women_safety_app/child/bottom_page.dart';
+import 'package:women_safety_app/child/forget_password.dart';
 import 'package:women_safety_app/components/PrimaryButton.dart';
 import 'package:women_safety_app/components/SecondaryButton.dart';
 import 'package:women_safety_app/components/custom_textfield.dart';
@@ -189,10 +190,19 @@ class _LoginScreenState extends State<LoginScreen> {
                               style: TextStyle(fontSize: 18),
                             ),
                             SecondaryButton(
-                                title: 'click here', onPressed: () {}),
+                              title: 'click here',
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => ForgetPasswordScreen(),
+                                  ),
+                                );
+                              },
+                            ),
                           ],
                         ),
                       ),
+
                       SecondaryButton(
                           title: 'Register ',
                           onPressed: () {

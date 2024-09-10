@@ -2,14 +2,14 @@ class UserModel {
   String? name;
   String? id;
   String? phone;
-  String? childEmail;
+  String? Email;
   String? guardianEmail;
   String? type;
   String? profilePic;
 
   UserModel(
       {this.name,
-        this.childEmail,
+        this.Email,
         this.id,
         this.guardianEmail,
         this.phone,
@@ -20,7 +20,7 @@ class UserModel {
     'name': name,
     'phone': phone,
     'id': id,
-    'childEmail': childEmail,
+    'Email': Email,
     'guardiantEmail': guardianEmail,
     'type': type,
     'profilePic': profilePic
