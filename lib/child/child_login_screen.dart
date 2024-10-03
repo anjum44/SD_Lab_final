@@ -114,11 +114,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
-                            Image.asset(
-                              'assets/logo.jpg',
-                              height: 200,
-                              width: 200,
-                            ),
+                            SafeArea(
+                              child: Image.asset(
+                                'assets/logo.jpg',
+                                height: 150,
+                                width: 200,
+                              ),
+                            )
                           ],
                         ),
                       ),

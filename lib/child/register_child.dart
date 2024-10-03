@@ -109,11 +109,13 @@ class _RegisterChildScreenState extends State<RegisterChildScreen> {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black),
                           ),
-                          Image.asset(
-                            'assets/logo.jpg',
-                            height: 200,
-                            width: 200,
-                          ),
+                          SafeArea(
+                            child: Image.asset(
+                              'assets/logo.jpg',
+                              height: 150,
+                              width: 100,
+                            ),
+                          )
                         ],
                       ),
                     ),
